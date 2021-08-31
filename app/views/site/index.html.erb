@@ -1,0 +1,15 @@
+<table>
+  <thead>
+  </thead>
+  <tbody>
+    <% @mail.each do |email| %>
+      <tr>
+        <td><%= email.mail.from.first %></td>
+        <td><%= email.mail.subject%></td>
+        <td><%= email.mail.body.raw_source %></td>
+        <td></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
